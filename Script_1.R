@@ -23,3 +23,23 @@ search()
 f <- function(x,y){
   x^2 + y/z
 }
+
+## below will return 7 for c()
+a <- 7
+
+b <- function() a
+
+c <- function() {
+  a<-8
+  b()
+}
+
+c()
+
+## below will return 8 for d()
+d<- function(){
+  a<-8
+  print(a)
+}
+
+d()
